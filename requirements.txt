@@ -1,75 +1,39 @@
-# Core Python packages
-setuptools==69.5.1
-wheel==0.43.0
-pip==24.0
-
-# Web Framework
-Django==4.2.11
-asgiref==3.7.2
-sqlparse==0.4.4
-pytz==2024.1
-
-# WSGI Server
-gunicorn==21.2.0
-whitenoise==6.6.0
+# Core Django packages
+Django==4.2.5
+djangorestframework==3.16.0
+djangorestframework-simplejwt==5.5.0
+django-crispy-forms==2.4
+django-resized==1.0.3
+django-taggit==5.0.1
 
 # Database
-PyMySQL==1.1.0
-dj-database-url==2.1.0
+mysqlclient==2.0.3
 
-# Heroku Integration
+# Web server
+gunicorn==20.1.0
+
+# Static files
+whitenoise==5.2.0
+
+# Environment configuration
 django-heroku==0.3.1
+dj-database-url==0.5.0
+python-dotenv==1.0.0
 
-# Machine Learning - TensorFlow Stack
-tensorflow==2.16.1
-keras==3.0.5
-numpy==1.26.4
-h5py==3.10.0
-
-# TensorFlow Dependencies
-absl-py==2.1.0
-astunparse==1.6.3
-flatbuffers==24.3.25
-gast==0.5.4
-google-pasta==0.2.0
-grpcio==1.62.1
-libclang==18.1.1
-opt-einsum==3.3.0
-protobuf==4.25.3
-tensorflow-io-gcs-filesystem==0.36.0
-termcolor==2.4.0
-typing-extensions==4.10.0
-wrapt==1.16.0
-
-# Google Auth
-google-auth==2.29.0
-google-auth-oauthlib==1.2.0
-cachetools==5.3.3
-pyasn1==0.6.0
-pyasn1-modules==0.4.0
-rsa==4.9
-oauthlib==3.2.2
-
-# HTTP & Requests
+# Core Python packages
 requests==2.31.0
-requests-oauthlib==1.4.0
-urllib3==2.2.1
-certifi==2024.2.2
-charset-normalizer==3.3.2
-idna==3.6
+Pillow==10.0.0
+certifi==2023.7.22
 
-# Image Processing
-Pillow==10.2.0
+# API and async support
+fastapi==0.104.1
+uvicorn==0.24.0.post1
+starlette==0.27.0
 
 # Utilities
 click==8.1.7
 colorama==0.4.6
-tqdm==4.66.2
+pytz==2023.3
 six==1.16.0
-Markdown==3.6
-Werkzeug==3.0.1
-regex==2023.12.25
-
-# Packaging
-importlib-metadata==7.1.0
-zipp==3.17.0
+sqlparse==0.4.4
+urllib3==1.26.20
