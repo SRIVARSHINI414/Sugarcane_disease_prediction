@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sugarcane Leaf Disease Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <ul class="nav-area">
+            </ul>
+        </div>
+
+        <div class="welcome-text">
+            <h1>Sugarcane Leaf Disease Detection</h1>
+            <form method="post" enctype="multipart/form-data" action="predictImage">
+            {% csrf_token %}
+                <input name="filePath" class="fas fa-upload" type="file" id="files" class="hidden"/>
+                <label for="files">Select file</label>
+                
+                <br>
+                
+                <label for="file-input">
+                    <i class="fas fa-upload"></i> &nbsp;
+                    <input type="submit" class="fas fa-upload" value="SUBMIT">
+                </label>
+            </form>
+        </div>
+
+        
+    </header>
+</body>
+<style>
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper 
+{
+    width: 100%;
+    margin: auto;
+}
+header 
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://cff2.earth.com/uploads/2024/03/29151621/sugarcane-genome_sequenced_1m.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.nav-area 
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li 
+{
+    display: inline-block;
+}
+.nav-area li a 
+{
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: poppins;
+    font-size: 16px;
+}
+.nav-area li a:hover 
+{
+    color: #ffe15d;
+}
+.welcome-text 
+{
+    position: absolute;
+    margin: 20% 30%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.welcome-text h1 
+{
+    color: #ffe15d;
+    font-size: 60px;
+    text-shadow: 3px 3px black;
+}
+label 
+{
+    display: inline-block;
+    position: relative; 
+    color: #ffffff;
+    border: 1px solid #fff;
+    font-size: 18px;
+    text-align: center;
+    width: 150px;
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+label:hover 
+{
+    background: #fff;
+    color: #333;
+}
+input[type="file"] {
+    display: none;
+}
+input[type="submit"]
+{
+    background-color:rgba(255, 255, 255, 0);
+    font-size: 18px; 
+    color: #fff;
+    border:rgba(255, 255, 255, 0); ;
+}
+input[type="submit"]:hover
+{
+    background: #fff;
+    color: #333;
+}
+@media (max-width:600px) 
+{
+    .wrapper 
+    {
+        width: 100%;
+        height: 100vh;
+    }
+    img 
+    {
+        width: 100%;
+        height: 100vh;
+    }
+    .welcome-text 
+    {
+        position: absolute;
+        text-align: center;
+    }
+    .nav-area 
+    {
+        float: none;
+        margin-top: 0;
+    }
+    .nav-area li a 
+    {
+        padding: 5px;
+        font-size: 11px;
+    }
+    .nav-area 
+    {
+        text-align: center;
+    }
+    .welcome-text h1 
+    {
+        font-size: 30px;
+    }
+}
+</style>
+
+</html>
